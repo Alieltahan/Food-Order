@@ -1,15 +1,18 @@
-import React, { Fragment } from "react";
+import React, { useState } from "react";
+import Cart from "./components/Cart/Cart";
 import Header from "./components/Layout/Header";
 import Meals from "./components/Meals/Meals";
+import CartProvider from "./components/store/CartProvider";
 
 function App() {
   return (
-    <Fragment>
+    <CartProvider>
+      <Cart />
       <Header />
       <main>
         <Meals></Meals>
       </main>
-    </Fragment>
+    </CartProvider>
   );
 }
 
