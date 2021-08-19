@@ -5,10 +5,19 @@ import Meals from "./components/Meals/Meals";
 import CartProvider from "./components/store/CartProvider";
 
 function App() {
+  const [cartIsShown, setCartIsShown] = useState(false);
+
+  const showCartHandler = () => {
+    setCartIsShown(true);
+  };
+  const hideCartHandler = () => {
+    setCartIsShown(false);
+  };
+
   return (
     <CartProvider>
-      <Cart />
-      <Header />
+      {cartIsShown && <Cart onCloseCart={hideCartHandler} />}
+      <Header onOShowCart={showCartHandler} />
       <main>
         <Meals></Meals>
       </main>
