@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import CartIcon from "./../Cart/CartIcon";
-import styles from "./HeaderCartButton.module.css";
+import styles from "../styles/HeaderCartButton.module.css";
 
 const HeaderCartButton = (props) => {
   return (

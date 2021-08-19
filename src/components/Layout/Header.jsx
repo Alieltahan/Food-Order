@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import styles from "./Header.module.css";
+import styles from "../styles/Header.module.css";
 import mealsImage from "../../images/meals.jpg";
 import HeaderCartButton from "./HeaderCartButton";
 const Header = (props) => {
