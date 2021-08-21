@@ -1,14 +1,10 @@
-import React, { useContext, Fragment } from "react";
+import React, { useContext, Fragment, useState, useEffect } from "react";
 import CartIcon from "./../Cart/CartIcon";
 import styles from "../styles/HeaderCartButton.module.css";
 import ContextCart from "./../store/context-Cart";
 
 const HeaderCartButton = (props) => {
   const ctxCart = useContext(ContextCart);
-
-  const numberOfItems = ctxCart.items.reduce((acc, item) => {
-    return acc + item.amount;
-  }, 0);
 
   return (
     <Fragment>
