@@ -1,6 +1,10 @@
 .meal {
-  display: flex;
-  justify-content: space-between;
+  /* display: flex;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(4, minmax(max-content, 200rem));
+  /* justify-items: center; */
+  align-items: center;
   margin: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid #ccc;
@@ -12,6 +16,8 @@
 
 .description {
   font-style: italic;
+  display: grid;
+  justify-items: start;
 }
 
 .price {
