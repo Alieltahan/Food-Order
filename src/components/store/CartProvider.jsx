@@ -29,6 +29,14 @@ const cartReducer = (state, action) => {
       totalAmount: updatedTotalAmount,
     };
   }
+  if (action.type === "REMOVE") {
+    const existingCartItemIndex = state.items.findIndex(
+      (item) => item.id === action.id
+    );
+    const exitingItem = state.items[existingCartItemIndex];
+
+    const updatedTotalAmount = state.totalAmount - exitingItem.price;
+  }
 };
 
 const CartProvider = (props) => {
