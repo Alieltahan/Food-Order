@@ -1,23 +1,9 @@
-import React, { useContext, Fragment, useReducer } from "react";
+import React, { useContext, Fragment } from "react";
 import CartIcon from "./../Cart/CartIcon";
 import styles from "../styles/HeaderCartButton.module.css";
 import ContextCart from "./../store/context-Cart";
 
-const defaultCartState = {
-  items: [],
-  totalAmount: 0,
-};
-
-const cartReducer = (state, action) => {
-  return defaultCartState;
-};
-
 const HeaderCartButton = (props) => {
-  const [cartState, dispatchCartAction] = useReducer(
-    cartReducer,
-    defaultCartState
-  );
-
   const ctxCart = useContext(ContextCart);
 
   const numberOfItems = ctxCart.items.reduce((acc, item) => {
